@@ -11,9 +11,9 @@ This page walks through the physics in eight short steps, one per topic, with on
 | T3 | What does a fringe actually measure? | [03_van_cittert_zernike.ipynb](03_van_cittert_zernike.ipynb) |
 | T4 | How do you measure a star's size? | [04_stellar_diameters.ipynb](04_stellar_diameters.ipynb) |
 | T5 | How do many baselines and Earth's rotation help? | [05_uv_coverage.ipynb](05_uv_coverage.ipynb) |
-| T6 | How are the light paths kept matched? | planned |
-| T7 | What does the atmosphere do, and how is it beaten? | planned |
-| T8 | How do you get images of binaries and star surfaces? | planned |
+| T6 | How are the light paths kept matched? | [06_delay_lines.ipynb](06_delay_lines.ipynb) |
+| T7 | What does the atmosphere do, and how is it beaten? | [07_atmosphere_and_closure_phase.ipynb](07_atmosphere_and_closure_phase.ipynb) |
+| T8 | How do you get images of binaries and star surfaces? | [08_binaries_and_image_reconstruction.ipynb](08_binaries_and_image_reconstruction.ipynb) |
 
 ## 1. Stars are too small for one telescope (T1)
 
@@ -71,11 +71,11 @@ The more of this plane is filled, the more complete the information about the st
 
 ## 6. Delay lines (T6)
 
-The path difference from step 2 is not fixed. It changes continuously as Earth rotates. CHARA compensates with **delay lines**: mirrors on carts that roll along rails inside long vacuum pipes, adding exactly the right extra path to each beam. The vacuum matters because air would delay each colour differently.
+The path difference from step 2 is not fixed. It changes continuously as Earth rotates. CHARA compensates with **delay lines**. Fixed extra paths of up to 143 m are switched in with mirrors inside vacuum pipes. On top of those, a mirror on a cart rolls along a 46 m rail. The light goes out to the cart and back, so the cart adds up to 92 m of smoothly adjustable path. The carts run in air, which delays each colour slightly differently, so wedges of glass in the beams cancel that spread.
 
 ![The delay each baseline needs through a night, and how fast it changes](figures/00_overview/07_delay_lines.png)
 
-On the longest baselines the needed delay swings through a few hundred metres in a night, changing at up to about 17 mm per second. The carts must follow that while holding the path to within micrometres.
+On the longest baselines the needed delay swings through a few hundred metres in a night, changing at up to about 17 mm per second. The carts move half as fast, because the light passes them twice, and hold their position to about 12 nanometres.
 
 **Key idea:** delay lines are moving mirrors that keep the two paths equal as the star crosses the sky.
 
@@ -117,4 +117,4 @@ Open a notebook in VS Code or JupyterLab and select `.venv` as the kernel. The f
 .venv/bin/python make_overview_figures.py
 ```
 
-Notebook 04 and the δ Cephei figure download public CHARA data from the JMMC Optical Interferometry Database into `data/` on first run.
+Notebook 04 and the δ Cephei figure download public CHARA data on δ Cephei, and notebooks 06 to 08 download MIRC-X data on the red giant CL Lac. Both come from the JMMC Optical Interferometry Database and are saved in `data/` on first run.
