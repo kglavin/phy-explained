@@ -25,6 +25,25 @@ Then the notebooks, one topic each:
 
 Notebook 05 uses the δ Cephei data downloaded by notebook 04, so run 04 first. Notebooks 06 to 08 download their own data.
 
+### [Integratron](integratron/)
+
+How the Integratron, a 16.8 m wooden dome in Landers, California, focuses sound, rings, carries whispers round its wall, and what a sound bath in it sounds like. Start with the overview, which needs no code:
+
+- [00_overview.md](integratron/00_overview.md): the whole story in six short steps, with pictures.
+
+Then the notebooks, one topic each:
+
+| Topic | Notebook | Audio |
+|---|---|---|
+| T1 Dome reflections and focusing | [01_dome_reflections_and_focusing.ipynb](integratron/01_dome_reflections_and_focusing.ipynb) | |
+| T2 Ringing and room modes | [02_ringing_and_room_modes.ipynb](integratron/02_ringing_and_room_modes.ipynb) | |
+| T3 Focusing in 3D | [03_3d_focusing.ipynb](integratron/03_3d_focusing.ipynb) | |
+| T4 Whispering gallery | [04_whispering_gallery.ipynb](integratron/04_whispering_gallery.ipynb) | |
+| T5 The singing bowl | [05_singing_bowl.ipynb](integratron/05_singing_bowl.ipynb) | yes |
+| T6 Listening to the dome | [06_listening_to_the_dome.ipynb](integratron/06_listening_to_the_dome.ipynb) | yes |
+
+All results come from models with stated assumptions, such as wall absorption and a perfectly smooth dome. No measurements of the building are used.
+
 ## Running the notebooks
 
 Each series has its own Python environment. For the CHARA series:
@@ -44,3 +63,5 @@ To regenerate the overview figures:
 cd chara-array
 .venv/bin/python make_overview_figures.py
 ```
+
+For the Integratron series, replace `chara-array` with `integratron` in the commands above. It needs no data downloads.
