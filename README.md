@@ -29,18 +29,21 @@ Notebook 05 uses the δ Cephei data downloaded by notebook 04, so run 04 first. 
 
 How the Integratron, a 16.8 m wooden dome in Landers, California, focuses sound, rings, carries whispers round its wall, and what a sound bath in it sounds like. Start with the overview, which needs no code:
 
-- [00_overview.md](integratron/00_overview.md): the whole story in six short steps, with pictures.
+- [00_overview.md](integratron/00_overview.md): the whole story in seven short steps, with pictures.
 
 Then the notebooks, one topic each:
 
 | Topic | Notebook | Audio |
 |---|---|---|
-| T1 Dome reflections and focusing | [01_dome_reflections_and_focusing.ipynb](integratron/01_dome_reflections_and_focusing.ipynb) | |
-| T2 Ringing and room modes | [02_ringing_and_room_modes.ipynb](integratron/02_ringing_and_room_modes.ipynb) | |
+| T1 Dome reflections and focusing | [01_dome_reflections_and_focusing.ipynb](integratron/01_dome_reflections_and_focusing.ipynb) | yes |
+| T2 Ringing and room modes | [02_ringing_and_room_modes.ipynb](integratron/02_ringing_and_room_modes.ipynb) | yes |
 | T3 Focusing in 3D | [03_3d_focusing.ipynb](integratron/03_3d_focusing.ipynb) | |
-| T4 Whispering gallery | [04_whispering_gallery.ipynb](integratron/04_whispering_gallery.ipynb) | |
+| T4 Whispering gallery | [04_whispering_gallery.ipynb](integratron/04_whispering_gallery.ipynb) | yes |
 | T5 The singing bowl | [05_singing_bowl.ipynb](integratron/05_singing_bowl.ipynb) | yes |
 | T6 Listening to the dome | [06_listening_to_the_dome.ipynb](integratron/06_listening_to_the_dome.ipynb) | yes |
+| T7 Two crystal bowls | [07_two_crystal_bowls.ipynb](integratron/07_two_crystal_bowls.ipynb) | yes |
+
+WAV files of the notebooks' sounds are in [integratron/audio/](integratron/audio/README.md), so they can be heard without running code.
 
 All results come from models with stated assumptions, such as wall absorption and a perfectly smooth dome. No measurements of the building are used.
 

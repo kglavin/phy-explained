@@ -326,6 +326,35 @@ def echograms():
     save(fig, "08_echograms.png")
 
 
+def two_bowls():
+    rate = 22050
+    f1, f2, alpha = 261.6, 263.0, 0.1
+    t = np.arange(0, 3.0, 1 / rate)
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(11, 3.6))
+    ax1.plot(t, np.cos(2 * np.pi * f1 * t) + np.cos(2 * np.pi * f2 * t), color=BLUE,
+             linewidth=0.3)
+    ax1.plot(t, np.abs(1 + np.exp(2j * np.pi * (f2 - f1) * t)), color=ORANGE, linewidth=1.5)
+    ax1.set_xlabel("time (s)")
+    ax1.set_ylabel("sound pressure")
+    ax1.set_title(f"Bowls at {f1} and {f2} Hz: {f2 - f1:.1f} beats per second")
+
+    def gain(f):
+        return np.abs(1 / (1 + np.sqrt(1 - alpha) * np.exp(2j * np.pi * f * ROUND_TRIP_S)))
+
+    low = 255.8  # on a comb peak
+    envelope = np.abs(gain(low) + gain(low + 1.4) * np.exp(2j * np.pi * 1.4 * t))
+    ax2.plot(t, np.abs(1 + np.exp(2j * np.pi * 1.4 * t)) / 2, color=GREY, linestyle="--",
+             label="without the dome")
+    ax2.plot(t, envelope / envelope.max(), color=BLUE,
+             label=f"at the centre, one bowl on a resonance")
+    ax2.set_ylim(0, 1.15)
+    ax2.set_xlabel("time (s)")
+    ax2.set_ylabel("loudness (peak = 1)")
+    ax2.set_title("The dome can erase the throb")
+    ax2.legend(fontsize=8, loc="lower right")
+    save(fig, "09_two_bowls.png")
+
+
 if __name__ == "__main__":
     OUT.mkdir(parents=True, exist_ok=True)
     dome_and_rays()
@@ -336,3 +365,4 @@ if __name__ == "__main__":
     whispering_gallery()
     singing_bowl()
     echograms()
+    two_bowls()

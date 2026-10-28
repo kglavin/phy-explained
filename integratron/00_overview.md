@@ -2,7 +2,7 @@
 
 The Integratron is a wooden dome in Landers, California, in the Mojave Desert near Joshua Tree. George Van Tassel built it from the 1950s until his death in 1978. It is 16.8 m (55 ft) across and 11.6 m (38 ft) tall, and today it hosts sound baths in its upper room. Van Tassel's claims about rejuvenation have no evidence behind them. The acoustics are real, and they follow from the shape.
 
-This page walks through the physics in six short steps, one per topic, with one or two pictures each. Each step links to a notebook that covers the topic in depth with interactive sliders and audio.
+This page walks through the physics in seven short steps, one per topic, with one or two pictures each. Each step links to a notebook that covers the topic in depth with interactive sliders and audio.
 
 | Topic | Question | Notebook |
 |---|---|---|
@@ -12,6 +12,7 @@ This page walks through the physics in six short steps, one per topic, with one 
 | T4 | Why does a whisper cling to the wall? | [04_whispering_gallery.ipynb](04_whispering_gallery.ipynb) |
 | T5 | How does a singing bowl vibrate, and how do its notes meet the room? | [05_singing_bowl.ipynb](05_singing_bowl.ipynb) |
 | T6 | What does it all sound like at different spots? | [06_listening_to_the_dome.ipynb](06_listening_to_the_dome.ipynb) |
+| T7 | What do two crystal bowls sound like together? | [07_two_crystal_bowls.ipynb](07_two_crystal_bowls.ipynb) |
 
 The model throughout is a hard hemisphere of radius 8.4 m on a 3.2 m wall, with the sound room's floor at the base of the hemisphere. Windows, ribs and people are left out unless a notebook says otherwise.
 
@@ -90,6 +91,20 @@ The last notebook traces 60,000 rays through the dome to compute what a listener
 The smooth dome rings for about 10 s at 1 kHz. Air absorption takes out the high frequencies first, so the tail grows darker as it fades. A rougher wall that scatters sound weakens the focus and shortens the ringing.
 
 **Key idea:** where you lie in the dome decides whether you hear a focused copy of a sound, a fast flutter of your own voice, or a scattered wash.
+
+## 7. Two crystal bowls (T7)
+
+A rubbed crystal bowl sings an almost pure tone. Two bowls a little apart in pitch drift in and out of step, so the sound swells and fades at the difference between their frequencies: 1.4 times a second for bowls at 261.6 and 263.0 Hz. This throb is called **beating**.
+
+![Two bowls beating, and the throb with and without the dome](figures/00_overview/09_two_bowls.png)
+
+In a room each ear hears both bowls, slightly offset in time, so the throb reaches the two ears at different moments. "Binaural beats" are something else: they need headphones, with each ear hearing only one tone. At the dome's centre each bowl lands on its own spot of the 20.5 Hz comb. If one lands on a resonance peak it can drown out the other and erase the throb (right).
+
+**Key idea:** two close notes throb at the difference between them, and the dome decides how deep that throb is.
+
+## Listening without running code
+
+The `audio/` folder holds WAV files of the sounds the notebooks play, listed in [audio/README.md](audio/README.md). They are made by `make_audio_examples.py`, which runs the notebooks' own code.
 
 ## Running the notebooks
 
