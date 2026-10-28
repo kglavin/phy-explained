@@ -74,6 +74,10 @@ A struck singing bowl bends its rim into patterns with 4, 6, 8 and more lobes. E
 
 ![The first four rim patterns of a bowl and their frequencies](figures/00_overview/07_singing_bowl.png)
 
+The lowest pattern carries most of the sound. Here it is in motion, enlarged and slowed down. The four black points on the rim are nodes, which never move.
+
+![A bowl vibrating in its 4-lobed pattern, seen in 3D and from above](figures/animations/crystal_bowl_vibrating.gif)
+
 The frequencies follow the ratios 1 : 2.83 : 5.42 : 8.77, not whole numbers, so a bowl sounds like a cluster of tones. Small imperfections split each pattern into two close frequencies, which beat: this is the bowl's slow pulse. In the dome, each of the bowl's frequencies lands somewhere on the 20.5 Hz comb, which gives it anything from −6 to +32 dB at the centre. A small change in the bowl's pitch reshuffles which of its frequencies are boosted.
 
 **Key idea:** a bowl's inharmonic frequencies each land differently on the dome's comb, so the room reshapes the bowl's sound.
@@ -98,6 +102,12 @@ A rubbed crystal bowl sings an almost pure tone. Two bowls a little apart in pit
 
 ![Two bowls beating, and the throb with and without the dome](figures/00_overview/09_two_bowls.png)
 
+In motion, with the pitch gap enlarged so one beat takes 8 cycles: the rims swing in step, drift out of step, and come back.
+
+![Two bowl rims drifting in and out of step, above their summed sound wave](figures/animations/two_bowls_beating.gif)
+
+Longer versions of both animations, made with Manim, are in [manim/videos/](manim/videos/).
+
 In a room each ear hears both bowls, slightly offset in time, so the throb reaches the two ears at different moments. "Binaural beats" are something else: they need headphones, with each ear hearing only one tone. At the dome's centre each bowl lands on its own spot of the 20.5 Hz comb. If one lands on a resonance peak it can drown out the other and erase the throb (right).
 
 **Key idea:** two close notes throb at the difference between them, and the dome decides how deep that throb is.
@@ -113,4 +123,4 @@ cd integratron
 uv venv .venv && uv pip install -p .venv -r requirements.txt
 ```
 
-Open a notebook in VS Code or JupyterLab and select `integratron/.venv` as the kernel. The figures on this page come from `make_overview_figures.py`.
+Open a notebook in VS Code or JupyterLab and select `integratron/.venv` as the kernel. The figures on this page come from `make_overview_figures.py`, and the GIFs from `make_animations.py`. The Manim videos come from `manim/crystal_bowls.py`, which needs the extra packages in `requirements-manim.txt`.

@@ -43,7 +43,7 @@ Then the notebooks, one topic each:
 | T6 Listening to the dome | [06_listening_to_the_dome.ipynb](integratron/06_listening_to_the_dome.ipynb) | yes |
 | T7 Two crystal bowls | [07_two_crystal_bowls.ipynb](integratron/07_two_crystal_bowls.ipynb) | yes |
 
-WAV files of the notebooks' sounds are in [integratron/audio/](integratron/audio/README.md), so they can be heard without running code.
+WAV files of the notebooks' sounds are in [integratron/audio/](integratron/audio/README.md), so they can be heard without running code. Animations of a crystal bowl vibrating and of two bowls beating are shown in the overview, with longer Manim videos in [integratron/manim/videos/](integratron/manim/videos/).
 
 All results come from models with stated assumptions, such as wall absorption and a perfectly smooth dome. No measurements of the building are used.
 
